@@ -63,11 +63,10 @@
   border-radius: 50%;
   width: 350px;
   height: 350px;
-
   background-color: var(--primary);
 }
 
-.moon::before {
+.overlay {
   position: absolute;
   content: "";
   border-radius: 50%;
