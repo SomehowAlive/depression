@@ -23,6 +23,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 4rem;
+  transition: background 1s ease;
 }
 
 .left {
@@ -91,8 +92,4 @@
 
 .full-moon {
   transform: translate(-100%, -55%);
-}
-
-:root.wtf {
-  --primary: white;
 }
