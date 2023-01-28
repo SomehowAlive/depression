@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --bg: #191b1d;
-  --primary: #bdbdbd;
+  --bg: #0c0d0e;
+  --primary: #8d8581;
+  transition: 0.5s ease;
 }
 
 * {
@@ -25,16 +26,18 @@
 }
 
 .left {
+  position: relative;
+  z-index: 5;
   flex: 0 1 60%;
   padding: 4rem;
   gap: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 .main-text {
-  font-size: 3.5rem;
+  font-size: 2.4rem;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   color: var(--primary);
@@ -59,11 +62,17 @@
 
 .moon {
   position: relative;
-  opacity: 0.8;
   border-radius: 50%;
   width: 350px;
   height: 350px;
   background-color: var(--primary);
+  transition: 2s ease-in-out;
+  box-shadow: 0 0 0px -10px white;
+}
+
+.illuminated {
+  background-color: white;
+  box-shadow: 0 0 80px -10px white;
 }
 
 .overlay {
@@ -71,9 +80,19 @@
   content: "";
   border-radius: 50%;
   top: 50%;
-  right: 15%;
+  right: 20%;
   translate: 0 -55%;
   width: 100%;
   height: 100%;
-  background-color: var(--bg);
+  background: var(--bg);
+  transition: 1s ease-in-out;
+  z-index: 0;
+}
+
+.full-moon {
+  transform: translate(-100%, -55%);
+}
+
+:root.wtf {
+  --primary: white;
 }
