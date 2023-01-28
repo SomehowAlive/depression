@@ -11,3 +11,8 @@ illuminateBtn.onclick = () => {
     hero.style.backgroundColor = "rgb(5, 20, 43)";
   }, 1000);
 };
+
+// making the hero section have a paralax effect
+document.addEventListener("scroll", (e) => {
+  document.querySelector(".hero-content").style.translate = `0 -${window.scrollY}px`;
+});

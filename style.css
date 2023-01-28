@@ -19,11 +19,15 @@
 .hero {
   background-color: var(--bg);
   height: 100vh;
+  padding: 4rem;
+  transition: background 1s ease;
+}
+.hero-content {
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 4rem;
-  transition: background 1s ease;
+  transition: 0.4s ease;
 }
 
 .left {
